@@ -1,15 +1,13 @@
 import { Div, Label, Input } from './ContactFilter.styled';
-import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from '../redux/selectors';
 import { changeFilter } from '../redux/filterSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
-const Filter = () => {
+const ContactFilter = () => {
   const value = useSelector(selectFilter);
   const dispatch = useDispatch();
-
   const onChange = event => {
     const normalizedValue = event.target.value.toLowerCase();
-
     dispatch(changeFilter(normalizedValue));
   };
 
@@ -26,4 +24,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default ContactFilter;

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { nanoid } from '@reduxjs/toolkit';
 import { Form, Label, Button, Input } from './ContactForm.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from '../redux/selectors';
 import { addContacts } from '../redux/operations';
+import { nanoid } from '@reduxjs/toolkit';
 
 const nameInputId = nanoid();
 const numberInputId = nanoid();
